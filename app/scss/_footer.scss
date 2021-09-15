@@ -1,0 +1,52 @@
+.footer {
+  background-color: $veryDarkBlackBlue;
+  border-top-right-radius: 6.25rem;
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4.75rem;
+    padding-bottom: 1rem;
+    @include breakpoint-up(large) {
+      flex-direction: row;
+    }
+  }
+  &__logo {
+    text-align: center;
+    flex: 0 1 auto;
+    @include breakpoint-up(large) {
+      flex: 1 1 auto;
+      text-align: left;
+    }
+  }
+
+  &__section {
+    padding-bottom: 3.5rem;
+    flex: 0 1 auto;
+    @include breakpoint-up(large) {
+      flex: 1 1 auto;
+    }
+    a {
+      display: block;
+      font-family: "Ubuntu", sans-serif;
+      color: white;
+      text-align: center;
+      line-height: 1.9;
+      @include breakpoint-up(large) {
+        text-align: left;
+        line-height: 2.3;
+      }
+    }
+  }
+
+  &__title {
+    font-family: "Ubuntu", sans-serif;
+    color: $white;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 2.75rem;
+    @include breakpoint-up(large) {
+      text-align: left;
+      padding-bottom: 2.25rem;
+    }
+  }
+}

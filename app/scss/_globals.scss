@@ -1,0 +1,155 @@
+html {
+  width: 100%;
+  font-size: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  font-weight: 300;
+  color: $veryDarkGrayishBlue;
+  // min-height: 300vh;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.container-px {
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+}
+
+button,
+.button {
+  position: relative;
+  display: inline-block;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+
+  &.button-secondary {
+    color: $veryDarkBlue;
+    background: none;
+    opacity: 0.75;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    margin: 0 auto;
+    @include breakpoint-up(large) {
+      color: $white;
+      margin: 0;
+    }
+  }
+
+  &.button-primary {
+    background: linear-gradient(to right, $veryLightRedGradient, $lightRedGradient);
+    color: $white;
+    padding: 1rem 2.5rem;
+    border-radius: 3.125rem;
+    margin: 0 auto;
+    @include breakpoint-up(large) {
+      background: $white;
+      color: $lightRed;
+      margin: 0;
+    }
+  }
+  &.button-light {
+    padding: 1rem 1.5rem;
+    border-radius: 3.125rem;
+    margin: 0;
+    background: $white;
+    color: $lightRed;
+  }
+
+  &.button-outline {
+    background: none;
+    min-width: 136px;
+    padding: 0.9rem 1.5rem;
+    border-radius: 3.125rem;
+    margin: 0;
+    color: $white;
+    border: white 2px solid;
+  }
+}
+
+.text-light {
+  color: $white;
+}
+
+.text-dark {
+  color: $veryDarkBlackBlue;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-jc-sa {
+  justify-content: space-around;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+.v-hidden {
+  visibility: hidden;
+}
+
+.d-none {
+  display: none;
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}

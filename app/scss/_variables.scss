@@ -1,0 +1,27 @@
+//font family
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+//font-family: 'Overpass', sans-serif;
+//font-family: 'Ubuntu', sans-serif;
+
+// color primary
+$lightRed: hsl(356, 100%, 66%); //cta text
+$veryLightRed: hsl(355, 100%, 74%); //cta hover background
+$veryDarkBlue: hsl(208, 49%, 24%); //heading
+
+//neutral
+$white: hsl(0, 0%, 100%); //text
+$grayishBlue: hsl(240, 2%, 79%); // footer text
+$veryDarkGrayishBlue: hsl(207, 13%, 34%); // body copy
+$veryDarkBlackBlue: hsl(240, 10%, 16%); // body copy
+
+//gradient
+//Background gradient - Intro/CTA mobile nav:
+$veryLightRedGradient: hsl(13, 100%, 72%);
+$lightRedGradient: hsl(353, 100%, 62%);
+
+//Background gradient - body:
+$veryDarkGrayishBlueGradient: hsl(237, 17%, 21%);
+$veryDarkDesaturatedBlueGradient: hsl(237, 23%, 32%);
+
+//background navbar
+$colorBackgroundNavChild: #efeff1;

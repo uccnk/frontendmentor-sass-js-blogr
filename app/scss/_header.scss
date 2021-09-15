@@ -1,0 +1,214 @@
+.header {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  padding-top: 3.625rem;
+  padding-bottom: 3.625rem;
+
+  &__nav {
+    display: flex;
+    @include breakpoint-down(medium) {
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    // flex: 1 1 auto;
+    padding-right: 4.0625rem;
+    margin-bottom: 12px;
+    margin-top: 12px;
+  }
+
+  &__links {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    background-color: $white;
+
+    list-style-type: none;
+    list-style-position: inside;
+    list-style-image: none;
+
+    display: none;
+    position: absolute;
+
+    padding: 0;
+    margin: 0;
+
+    top: 9.6875rem;
+    left: 1.875rem;
+    right: 1.875rem;
+
+    padding-top: 2.8125rem;
+    border-radius: 0.55rem;
+
+    &.open {
+      display: block;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      @include breakpoint-up(large) {
+        display: flex;
+        box-shadow: none;
+      }
+    }
+
+    @include breakpoint-up(large) {
+      background-color: transparent;
+      display: flex;
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      align-items: center;
+      flex: 1 1 auto;
+      padding-top: 0;
+    }
+
+    li {
+      &:not(:last-child) {
+        padding-bottom: 2.625rem;
+        text-align: center;
+
+        &.open {
+          padding-bottom: 1.875rem;
+          a svg {
+            transform: rotate(180deg);
+          }
+          @include breakpoint-up(large) {
+            padding-bottom: 0;
+          }
+        }
+        @include breakpoint-up(large) {
+          padding-right: 2rem;
+          padding-bottom: 0;
+        }
+      }
+      a {
+        font-size: 1.25rem;
+        color: $veryDarkBlackBlue;
+        opacity: 0.75;
+
+        @include breakpoint-up(large) {
+          color: $white;
+          font-size: 1rem;
+          &:hover {
+            font-weight: 600;
+          }
+        }
+
+        text {
+          padding-right: 0.3125rem;
+        }
+
+        svg path {
+          stroke: $lightRed;
+          @include breakpoint-up(large) {
+            stroke: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &__childs {
+    background-color: $colorBackgroundNavChild;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: inside;
+    list-style-image: none;
+    display: none;
+
+    &.open {
+      border-radius: 0.625rem;
+      padding-top: 2.25rem;
+      padding-bottom: 2.25rem;
+      margin-top: 2rem;
+      margin-left: 1.875rem;
+      margin-right: 1.875rem;
+      display: block;
+
+      & li {
+        @include breakpoint-up(large) {
+          padding-left: 1.5rem;
+          padding-right: 0;
+          padding-bottom: 1.25rem;
+          text-align: left;
+        }
+        a {
+          @include breakpoint-up(large) {
+            color: $veryDarkBlackBlue;
+
+            &:hover {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      @include breakpoint-up(large) {
+        position: absolute;
+        margin: 0;
+        width: 10.625rem;
+        margin-top: 1.625rem;
+        padding-top: 2rem;
+        padding-bottom: 0.875rem;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
+  &__buttons {
+    // flex: 1 1 auto;
+    margin-bottom: 1.875rem;
+    > button {
+      display: block;
+    }
+
+    & .button-primary {
+      @include breakpoint-down(medium) {
+        font-size: 1.25rem;
+      }
+    }
+
+    & .button-secondary {
+      @include breakpoint-down(medium) {
+        margin-bottom: 0.875rem;
+        font-size: 1.25rem;
+        margin-top: 1.8125rem;
+        &::before {
+          position: absolute;
+          content: "";
+          display: block;
+          height: 2px;
+          left: calc(3.75rem + 2rem + 25.6935px - 50vw);
+          right: calc(3.75rem + 2rem + 25.6935px - 50vw);
+          top: -1.8125rem;
+          background-color: $veryDarkGrayishBlue;
+        }
+      }
+    }
+
+    @include breakpoint-up(large) {
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+  }
+
+  &__toggle {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    > span {
+      display: block;
+      width: 64px;
+      height: 4px;
+      background-color: $white;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
